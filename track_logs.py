@@ -1,7 +1,13 @@
-"""Module to utilize time in code"""
+""" module to utilize time in code """
 import time
+
+""" module to log events """
 import logging
+
+""" module used to determine whether the event occurs with a file or directory """
 import os
+
+""" module used to observe given directory and notify the event handler about file system events """
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -85,8 +91,6 @@ if __name__ == "__main__":
     SAMPLING_FREQUENCY = 5.0
 
     file_watcher = FileWatcherBinding(SAMPLING_FREQUENCY)
-
-    #FILE_NAME = "."
 
     file_watcher.watch_file_dir(file_dir_event_handler)
 
